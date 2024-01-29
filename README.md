@@ -1,9 +1,12 @@
-# Smart table using HOG-SVM to indentify student's face
+# Face recognition using HOG-SVM 
 ## Introduction
 Recognize and manipulate faces from Python or from the command line with the world's simplest face recognition library.
 Built using [dlib](http://dlib.net/)'s state-of-the-art face recognition
-built with deep learning. The model has an accuracy of 90.38% on the
-[Large-scale CelebFaces Attributes (CelebA) ](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) benchmark.
+built with deep learning. The model has an accuracy of 90.72% on the
+[Large-scale CelebFaces Attributes (CelebA) ](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) benchmark. 
+<br>
+
+This project is built based on [ageitgey's document](https://github.com/ageitgey/face_recognition/tree/master)
 
 ## Requirements
 - Python 3.8+ or Python 2.7
@@ -41,6 +44,22 @@ pip3 install face_recognition
 While Windows isn't officially supported, helpful users have posted instructions on how to install this library:
 
   * [@masoudr's Windows 10 installation guide (dlib + face_recognition)](https://github.com/ageitgey/face_recognition/issues/175#issue-257710508)
+
+## Filesystem Hierchies
+```bash
+Project/
+|____Models/
+|    |____User1/
+|    |    |____UserImg1.png
+|    |    |____UserImg2.png
+|    |    |____UserImg3.png
+|    |____User2/
+|         |____UserImg1.jpg
+|         |____UserImg2.jpg
+|         |____UserImg3.jpg
+|____facerec.py
+|____train.py
+```
 
 ## Python Module
 
@@ -129,21 +148,21 @@ See [this example](https://github.com/ageitgey/face_recognition/blob/master/exam
 
 All the examples are available [here](https://github.com/ageitgey/face_recognition/tree/master/examples).
 
+## Other Articles
 
-
-## Face Detection
+### Face Detection
 
 * [Find faces in a photograph](https://github.com/ageitgey/face_recognition/blob/master/examples/find_faces_in_picture.py)
 * [Find faces in a photograph (using deep learning)](https://github.com/ageitgey/face_recognition/blob/master/examples/find_faces_in_picture_cnn.py)
 * [Find faces in batches of images w/ GPU (using deep learning)](https://github.com/ageitgey/face_recognition/blob/master/examples/find_faces_in_batches.py)
 * [Blur all the faces in a live video using your webcam (Requires OpenCV to be installed)](https://github.com/ageitgey/face_recognition/blob/master/examples/blur_faces_on_webcam.py)
 
-## Facial Features
+### Facial Features
 
 * [Identify specific facial features in a photograph](https://github.com/ageitgey/face_recognition/blob/master/examples/find_facial_features_in_picture.py)
 * [Apply (horribly ugly) digital make-up](https://github.com/ageitgey/face_recognition/blob/master/examples/digital_makeup.py)
 
-## Facial Recognition
+### Facial Recognition
 
 * [Find and recognize unknown faces in a photograph based on photographs of known people](https://github.com/ageitgey/face_recognition/blob/master/examples/recognize_faces_in_pictures.py)
 * [Identify and draw boxes around each person in a photo](https://github.com/ageitgey/face_recognition/blob/master/examples/identify_and_draw_boxes_on_faces.py)
@@ -156,10 +175,10 @@ All the examples are available [here](https://github.com/ageitgey/face_recogniti
 * [Recognize faces with a K-nearest neighbors classifier](https://github.com/ageitgey/face_recognition/blob/master/examples/face_recognition_knn.py)
 * [Train multiple images per person then recognize faces using a SVM](https://github.com/ageitgey/face_recognition/blob/master/examples/face_recognition_svm.py)
 
-## Creating a Standalone Executable
+### Creating a Standalone Executable
 If you want to create a standalone executable that can run without the need to install `python` or `face_recognition`, you can use [PyInstaller](https://github.com/pyinstaller/pyinstaller). However, it requires some custom configuration to work with this library. See [this issue](https://github.com/ageitgey/face_recognition/issues/357) for how to do it.
 
-## Articles and Guides that cover `face_recognition`
+### Articles and Guides that cover `face_recognition`
 
 - Ageitgey's article on how Face Recognition works: [Modern Face Recognition with Deep Learning](https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78)
   - Covers the algorithms and how they generally work
@@ -170,10 +189,10 @@ If you want to create a standalone executable that can run without the need to i
 - [Face clustering with Python](https://www.pyimagesearch.com/2018/07/09/face-clustering-with-python/) by Adrian Rosebrock
   - Covers how to automatically cluster photos based on who appears in each photo using unsupervised learning
 
-## How Face Recognition Works
+### How Face Recognition Works
 
 If you want to learn how face location and recognition work instead of
 depending on a black box library, [read Ageitgey's article](https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78).
 
-## HOG - Histograms of Oriented Diagram for Human Detection
+### HOG - Histograms of Oriented Diagram for Human Detection
 If you want to learn more how HOG work, read this [document](https://lear.inrialpes.fr/people/triggs/pubs/Dalal-cvpr05.pdf)
